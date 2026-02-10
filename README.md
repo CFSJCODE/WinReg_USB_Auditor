@@ -97,7 +97,7 @@ Após a execução do comando de compilação, o PyInstaller criará uma pasta c
 
 O seu arquivo final estará em: \dist\WinReg_USB_Auditor_CFSJ.exe
 
-Instrução de Uso: Basta copiar este arquivo .exe para um pen drive e executá-lo na máquina alvo. O relatório será gerado automaticamente na Área de Trabalho daquela máquina.
+Instrução de Uso: Basta copiar todas as pastas geradas para um pen drive e executá-lo na máquina alvo. O relatório será gerado automaticamente na Área de Trabalho daquela máquina.
 
 ⚖️ Aviso Legal
 Esta ferramenta destina-se estritamente ao uso ético por profissionais autorizados em auditorias de segurança, resposta a incidentes (IR) e perícia forense computacional.
