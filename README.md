@@ -2,9 +2,21 @@
 
 > **Ferramenta de Forense Digital para Auditoria de Artefatos USB no Registro do Windows.**
 
-**Autor:** Cláudio Francisco (CFSJ TECH)  
-**Ano:** 2026  
+**Autor:** Cláudio Francisco (CFSJ TECH)
+**Ano:** 2026
 **Plataforma:** Windows (Requer Privilégios de Administrador)
+
+---
+
+## 📦 Distribuição e Arquivos (Pacote WinRAR)
+
+Para facilitar a distribuição e utilização imediata, foi disponibilizado um **Arquivo Compactado (WinRAR)** contendo toda a estrutura do projeto:
+
+1.  **Script Python Original (`.py`):** O código-fonte aberto para fins de estudo e auditoria.
+2.  **Software Executável (`.exe`):** O binário compilado pronto para uso (localizado na pasta `dist` dentro do pacote).
+3.  **Estrutura de Pastas:** Todos os arquivos e diretórios necessários para a execução correta do software.
+
+> **Instrução Rápida:** Basta extrair o arquivo `.rar` em uma pasta de sua preferência e executar o arquivo `.exe` como Administrador. Não é necessário instalar Python se você utilizar o executável fornecido no pacote.
 
 ---
 
@@ -19,7 +31,7 @@ O objetivo principal desta ferramenta é **automatizar, escalar e facilitar** o 
 
 * 🛡️ **Auto-Elevação de Privilégios:** O script identifica se não é administrador e solicita automaticamente a elevação (UAC Bypass) para garantir acesso à hive `HKLM`.
 * 🕵️ **Análise Profunda:** Extrai metadados cruciais como ID do Fabricante (Vendor ID), ID do Produto (Product ID), Número de Série e "Friendly Name".
-* d **Timestamp Precision:** Converte os valores binários de *Last Write Time* do registro para um formato de data/hora legível para humanos.
+* 🕒 **Timestamp Precision:** Converte os valores binários de *Last Write Time* do registro para um formato de data/hora legível para humanos.
 * 📄 **Relatório Automático:** Gera e abre instantaneamente um relatório `.txt` detalhado diretamente na **Área de Trabalho** do usuário.
 
 ---
@@ -32,9 +44,9 @@ Este projeto nasceu da necessidade de otimizar processos de investigação digit
 
 ---
 
-## ⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos (Para desenvolvedores)
 
-Para executar o código fonte ou compilar o executável, você precisará de:
+Caso opte por rodar o script manualmente ou recompilar o código (ao invés de usar o pacote WinRAR pronto), você precisará de:
 
 1.  **Python 3.x** instalado no Windows.
 2.  Biblioteca **PyInstaller** (para gerar o executável standalone).
@@ -43,13 +55,13 @@ Para executar o código fonte ou compilar o executável, você precisará de:
 
 Abra o terminal (CMD ou PowerShell) e execute:
 
-```bash
+```cmd
 pip install pyinstaller
 Caso o comando pip não seja reconhecido pelo seu sistema, utilize o módulo do Python:
 
-Bash
+DOS
 py -m pip install pyinstaller
-🚀 Como Executar (Script Python)
+🚀 Como Executar (Script Python Manualmente)
 Se você deseja apenas testar o código em sua máquina de desenvolvimento sem gerar o executável final:
 
 Certifique-se de que o arquivo WinReg_USB_Auditor.py está na pasta atual.
@@ -58,10 +70,10 @@ Abra o terminal nesta pasta.
 
 Execute:
 
-Bash
+DOS
 python WinReg_USB_Auditor.py
 📦 Como Compilar para Executável (.exe)
-Esta etapa é crucial para transformar o script Python em um software autônomo (.exe) que pode ser executado em qualquer computador Windows (Pen drive, Live System), mesmo que a máquina alvo não tenha Python instalado.
+Esta etapa é crucial caso você tenha alterado o código e queira gerar um novo software autônomo (.exe) que pode ser executado em qualquer computador Windows (Pen drive, Live System), mesmo que a máquina alvo não tenha Python instalado.
 
 ⚠️ Importante: Localização
 Certifique-se de que o seu terminal (CMD/PowerShell) esteja aberto EXATAMENTE na mesma pasta onde o arquivo WinReg_USB_Auditor.py está salvo.
@@ -69,7 +81,7 @@ Certifique-se de que o seu terminal (CMD/PowerShell) esteja aberto EXATAMENTE na
 Comando de Compilação
 Copie e cole o comando abaixo no seu terminal para gerar o binário:
 
-Bash
+DOS
 py -m PyInstaller --noconfirm --onefile --console --uac-admin --name "WinReg_USB_Auditor_CFSJ.exe" "WinReg_USB_Auditor.py"
 Entendendo os Parâmetros:
 --onefile: Empacota o Python, as bibliotecas e seu script em um único arquivo .exe.
