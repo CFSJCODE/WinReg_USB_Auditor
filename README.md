@@ -54,12 +54,9 @@ Caso opte por rodar o script manualmente ou recompilar o código (ao invés de u
 ### Instalação das Dependências
 
 Abra o terminal (CMD ou PowerShell) e execute:
-
-```cmd
 pip install pyinstaller
 Caso o comando pip não seja reconhecido pelo seu sistema, utilize o módulo do Python:
 
-DOS
 py -m pip install pyinstaller
 🚀 Como Executar (Script Python Manualmente)
 Se você deseja apenas testar o código em sua máquina de desenvolvimento sem gerar o executável final:
@@ -70,7 +67,6 @@ Abra o terminal nesta pasta.
 
 Execute:
 
-DOS
 python WinReg_USB_Auditor.py
 📦 Como Compilar para Executável (.exe)
 Esta etapa é crucial caso você tenha alterado o código e queira gerar um novo software autônomo (.exe) que pode ser executado em qualquer computador Windows (Pen drive, Live System), mesmo que a máquina alvo não tenha Python instalado.
@@ -81,7 +77,6 @@ Certifique-se de que o seu terminal (CMD/PowerShell) esteja aberto EXATAMENTE na
 Comando de Compilação
 Copie e cole o comando abaixo no seu terminal para gerar o binário:
 
-DOS
 py -m PyInstaller --noconfirm --onefile --console --uac-admin --name "WinReg_USB_Auditor_CFSJ.exe" "WinReg_USB_Auditor.py"
 Entendendo os Parâmetros:
 --onefile: Empacota o Python, as bibliotecas e seu script em um único arquivo .exe.
