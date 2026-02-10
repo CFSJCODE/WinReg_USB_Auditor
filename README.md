@@ -99,4 +99,9 @@ Esta ferramenta destina-se estritamente ao uso ético por profissionais autoriza
 
 O autor e a CFSJ TECH não se responsabilizam pelo uso indevido, malicioso ou ilegal deste software.
 
-Desenvolvido por Cláudio Francisco (CFSJ TECH) - 2026
+Desenvolvido por Cláudio Francisco Dos Santos Júnior (CFSJ TECH) - 2026
+
+## 🌐 Conecte-se Conosco
+
+Para conhecer mais sobre nossos projetos e serviços em tecnologia e inovação, acesse:
+**[Visite o site oficial da CFSJ TECH](https://cfsjcode.github.io/CFSJ_TECH/)**
